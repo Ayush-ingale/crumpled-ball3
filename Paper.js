@@ -11,9 +11,16 @@ class Paper {
         World.add(world, this.body);
         this.image = loadImage("paper.png");
         this.radius = 90;
+        
     }
+    attach(body)
+{
+    this.launch.bodyA=body;
+
+}
 
     display() {
+        
         var pos = this.body.position;
         push();
         translate(pos.x,pos.y);
